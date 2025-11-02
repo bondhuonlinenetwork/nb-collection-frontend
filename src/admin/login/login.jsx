@@ -3,7 +3,7 @@ import axios from "axios";
 import { api } from '../../utils/api';
 import { useNavigate } from "react-router-dom";
 import { setToken } from "../auth";
-import "./Login.css";
+import "./login.css";
 
 export default function Login() {
     const [username, setUsername] = useState("");

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Checkout.css";
+import "./checkout.css";
 import { useLocation } from "react-router-dom";
 import Header from '../header/header';
 import { api } from '../../utils/api';

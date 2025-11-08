@@ -62,7 +62,7 @@ const UpdateOrder = ({
                         <tbody>
                             {orderData.products.map((p) => (
                                 <tr key={p.id}>
-                                    <td><img src={`http://localhost:8080${p.image}`} alt={p.name} width="50" height="40" /></td>
+                                    <td><img src={`${import.meta.env.VITE_API_URL}/${p.image}`} alt={p.name} width="50" height="40" /></td>
                                     <td>{p.name}</td>
                                     <td>৳ {p.price}</td>
                                     <td>{p.quantity}</td>

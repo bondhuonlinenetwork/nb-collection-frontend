@@ -68,7 +68,7 @@ function Home() {
                 {products.map(product => (
                     <div className="product" key={product.id}>
                         <Link to={`/product/${product.id}`}>
-                            <img src={`http://localhost:8080${product.images[0]}`} alt="" />
+                            <img src={`${import.meta.env.VITE_API_URL}/${product.images[0]}`} alt="" />
                         </Link>
                         <Link to={`/product/${product.id}`}>
                             <div className="product-name">{product.name}</div>

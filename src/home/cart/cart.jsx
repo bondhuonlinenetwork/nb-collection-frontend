@@ -149,7 +149,7 @@ const ShoppingCart = ({ cartOpen, setCartOpen }) => {
                                     </div>
                                 )}
                                 <img
-                                    src={`http://localhost:8080${item.image}`}
+                                    src={`${import.meta.env.VITE_API_URL}/${item.image}`}
                                     alt={item.name}
                                     className="cart-image"
                                 />

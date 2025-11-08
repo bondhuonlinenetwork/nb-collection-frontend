@@ -65,7 +65,7 @@ const ProductPage = () => {
                     <div className="main-image">
                         {product?.images && product?.images.length > 0 && (
                             <img
-                                src={`http://localhost:8080${mainImage}`}
+                                src={`${import.meta.env.VITE_API_URL}/${mainImage}`}
                                 alt="Mabroom Dates"
                             />
                             // <span className="discount-badge">৳170 DISCOUNT</span>
@@ -78,7 +78,7 @@ const ProductPage = () => {
                                 <img
                                     onClick={() => setMainImage(product.images[index])}
                                     key={index}
-                                    src={`http://localhost:8080${img}`}
+                                    src={`${import.meta.env.VITE_API_URL}/${img}`}
                                     alt={`thumb-${index}`}
                                 />
                             ))

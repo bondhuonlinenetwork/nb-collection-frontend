@@ -40,6 +40,7 @@ const CheckoutPage = () => {
         setErrors({});
         try {
             const response = await api.post('/order', orderInfo);
+            localStorage.setItem('cart', []);
             navigate(`/order-success/${response.data.id}`);
         } catch (error) {
             if (error.response && error.response.data && error.response.data.errors) {
@@ -155,7 +156,7 @@ const CheckoutPage = () => {
                     {products.map((product) => (
                         <div className="summary-item" key={product.id}>
                             <img
-                                src={`http://localhost:8080${product.image}`}
+                                src={`${import.meta.env.VITE_API_URL}/${product.image}`}
                                 alt="Product"
                                 className="product-img"
                             />

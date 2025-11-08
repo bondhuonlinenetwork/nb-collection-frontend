@@ -150,7 +150,7 @@ const UpdateProduct = ({ setUpdateProduct, updateProductData, category, refreshT
                             <div className="image-wrapper">
                                 {(variant.images || []).map((img, iIndex) => (
                                     <div key={iIndex} className="image">
-                                        <img src={`http://localhost:8080${img}`} alt={`variant-${vIndex}-${iIndex}`} />
+                                        <img src={`${import.meta.env.VITE_API_URL}/${img}`} alt={`variant-${vIndex}-${iIndex}`} />
                                         <button type="button" onClick={() => handleRemoveExistingVariantImage(vIndex, iIndex)}>✕</button>
                                     </div>
                                 ))}

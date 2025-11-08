@@ -113,7 +113,7 @@ const UpdateProduct = ({ setUpdateProduct, updateProductData, category, refreshT
                 <div className="image-wrapper">
                     {productData.images.map((img, index) => (
                         <div key={index} className="image">
-                            <img src={`http://localhost:8080${img}`} alt={`img-${index}`} />
+                            <img src={`${import.meta.env.VITE_API_URL}/${img}`} alt={`img-${index}`} />
                             <button type="button" onClick={() => handleRemoveExistingImage(index)}>✕</button>
                         </div>
                     ))}
